@@ -1,2 +1,2 @@
 # re-created-fridge
-Perkurtas šaldytuvas, ištaisytos klaidos ir tinkamai pridėti receptai
+Perkurtas šaldytuvas, ištaisytos klaidos, pataisyta gramatika ir tinkamai pridėti receptai
