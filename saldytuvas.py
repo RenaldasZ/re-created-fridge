@@ -101,4 +101,4 @@ while True:
     else:
         print("Neteisingas pasirinkimas. Bandykite dar kartą.\n")
 
-#sveiki
+#mainas
