@@ -1,10 +1,24 @@
-product_list = []
-recipe_list = []
+import json
+
+# Load product and recipe lists from JSON files
+try:
+    with open('products.json', 'r') as f:
+        product_list = json.load(f)
+except FileNotFoundError:
+    product_list = []
+
+try:
+    with open('recipes.json', 'r') as f:
+        recipe_list = json.load(f)
+except FileNotFoundError:
+    recipe_list = []
 
 def add_product():
     product_name = input("Įveskite produkto pavadinimą: ")
     product_mass = float(input("Įveskite produkto masę gramais: "))
     product_list.append((product_name, product_mass))
+    with open('products.json', 'w') as f:
+        json.dump(product_list, f)
     print(f"{product_name} ({product_mass}g) pridėtas į produktų sąrašą.\n")
 
 def remove_product():
@@ -44,6 +58,8 @@ def add_recipe():
         else:
             print(f"{ingredient_name} nerastas produktų sąraše. Prašome jį pridėti.")
     recipe_list.append((recipe_name, recipe_ingredients))
+    with open('recipes.json', 'w') as f:
+        json.dump(recipe_list, f)
     print(f"{recipe_name} pridėtas į receptų sąrašą.\n")
 
 def remove_recipe():
