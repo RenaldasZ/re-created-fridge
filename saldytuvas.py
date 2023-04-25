@@ -1,6 +1,5 @@
 import json
 
-# Load product and recipe lists from JSON files
 try:
     with open('products.json', 'r') as f:
         product_list = json.load(f)
